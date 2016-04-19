@@ -7,7 +7,15 @@ public class NumbersToWordsTest {
   public void convertToWords_returnsConvertedStringForOnesPlaces_convertedString() {
     NumbersToWords testConvert = new NumbersToWords();
     String expected = "one";
-    assertEquals(expected, testConvert.convertToWords(1));
+    assertEquals(expected, testConvert.convertToWords("1"));
+  }
+
+  @Test
+  public void
+  convertToWords_returnsConvertedStringForTensPlaces_convertedString() {
+    NumbersToWords testConvert = new NumbersToWords();
+    String expected = "fifteen";
+    assertEquals(expected, testConvert.convertToWords("15"));
   }
 
 }
